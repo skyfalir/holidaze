@@ -30,10 +30,10 @@ git clone https://github.com/skyfalir/holidaze.git
 
 ### Install all packages:
 
-Run npm install to get downloaded and set up.
+In the terminal, run 'npm install' to get downloaded and set up.
 
 ### Local hosting:
-in the terminal, run the 'npm run start' command.
+run the 'npm run start' command.
 
 This runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
