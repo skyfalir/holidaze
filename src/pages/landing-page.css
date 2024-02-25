@@ -1,0 +1,174 @@
+.home-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.home-top-container {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-image: url("../../assets/img/paris_eiffel_tower_with_blue_light_on_top_with_blue_sky_background_during_night_time_4k_5k_hd_travel.jpg");
+  background-position: 0% 40%;
+}
+.home-top {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-2);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home-hero {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  max-width: 1000px;
+  align-items: center;
+  padding-top: var(--space-3);
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+  flex-direction: row;
+  padding-bottom: var(--space-3);
+  justify-content: space-between;
+}
+.home-content-container .heading,
+.home-content-container .sub-heading,
+.header-text{
+    color: var(--white);
+}
+.home-close-menu {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.home-cards-container {
+  width: 100%;
+  display: flex;
+  grid-gap: var(--space-2);
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-top: var(--space-2);
+  align-items: flex-start;
+  margin-bottom: var(--space-2);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home-stats {
+  width: 100%;
+  display: flex;
+  padding: 48px;
+  max-width: 1400px;
+  justify-content: center;
+}
+.home-stat {
+  display: flex;
+  padding: 32px;
+  align-items: center;
+  flex-direction: column;
+}
+.home-icon {
+  fill: #c2adff;
+  width: 48px;
+  height: 48px;
+}
+.stats-title{
+    font-size: 3rem;
+    margin-top: var(--space-half);
+    font-weight: 300;
+}
+.stats-text {
+  color: var(--palette-700);
+  font-size: 0.75rem;
+  margin-top: var(--space-half);
+  text-align: center;
+}
+
+@media(max-width: 991px) {
+  .home-hero {
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+  }
+  .home-cards-container {
+    justify-content: center;
+  }
+}
+
+
+@media(max-width: 767px) {
+  .nav-right-side {
+    display: none;
+  }
+  .nav-burger-menu {
+    display: flex;
+  }
+  .sign-in-nav {
+    display: none;
+  }
+  .home-hero {
+    justify-content: center;
+  }
+  .home-content-container {
+    align-items: center;
+  }
+  .home-main {
+    padding-left: var(--space-half);
+    padding-right: var(--space-half);
+  }
+  .home-stats {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .home-stat {
+    padding: var(--space-half);
+  }
+  .home-text {
+    text-align: center;
+  }
+  .home-menu {
+    flex-direction: column;
+  }
+  .home-links-container {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-3);
+    justify-content: space-between;
+  }
+  .home-container {
+    margin-left: 0px;
+  }
+}
+
+
+@media(max-width: 479px) {
+  .home-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .home-subheading {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .home-stats {
+    align-items: center;
+    padding: 32px var(--space-half);
+    flex-direction: column;
+  }
+  .home-links-container {
+    margin-top: var(--space-2);
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .home-link {
+    margin-bottom: var(--space-half);
+  }
+  .home-follow-container {
+    margin-left: 0px;
+  }
+}

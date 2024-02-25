@@ -1,0 +1,80 @@
+:root {
+  --bg-1: linear-gradient(0deg, #001011,#002022);
+  --black: #0e0e0f;
+  --white: rgb(255, 255, 255);
+  --shade-1: rgb(18, 15, 13);
+  --shade-2: rgb(37, 35, 33);
+  --shade-3: rgb(57, 55, 61);
+  --shade-4: rgb(83, 73, 99);
+  --grad-1: linear-gradient(20deg, #fff, #E3BE9C);
+  --pri-1: #FFE3C3;
+  --pri-2: #2F404C;
+  --a-1: #e1d7f1;
+  --size-1: 1rem;
+  --space-1: 1em;
+  --space-2: 2em;
+  --space-3: 3em;
+  --br-1: 20px;
+}
+*{
+  font-family: 'Montserrat';
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: var(--bg-1)
+}
+main{
+  flex: 1;
+}
+.layout{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+button {
+  transition: 0.2s;
+  border: 1px solid var(--pri-1);
+  border-radius: 5px;
+  color: #222;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #E3BE9C;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+button:hover{
+  background-color: var(--shade-3);
+  color: var(--pri-1)
+}
+input{
+  background-color: var(--shade-2);
+  color: var(--white)
+}
+.list-item {
+  display: list-item;
+}
+.list {
+  width: 100%;
+  margin: 1em 0px 1em 0px;
+  display: block;
+  padding: 0px 0px 0px 1.5rem;
+  list-style-type: none;
+  list-style-position: outside;
+}
+input[type='text'],
+input[type='number'],
+textarea 
+.textarea {
+  color: var(--white);
+  cursor: auto;
+  padding: 0.5rem;
+  background-color: #222;
+}
+
+hr{
+  border-color: var(--pri-1);
+}

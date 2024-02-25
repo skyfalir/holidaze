@@ -1,0 +1,150 @@
+.navbar {
+	position: relative;
+	width: 100%;
+	height: 51px;
+	display: flex;
+	padding-block: 1rem;
+	align-items: center;
+	flex-direction: row;
+	background: var(--black);
+}
+.navbar .logo {
+	color: var(--pri-1);
+	font-size: 2rem;
+	font-weight: 800;
+	padding-inline: 15px;
+  position: absolute;
+  left: 0;
+}
+.nav-center {
+	position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+	padding-inline: 15px;
+}
+.navbar button {
+	background: var(--pri-1);
+	margin-inline: 15px;
+}
+.navbar .logged-in-nav button:hover {
+	background-color: var(--pri-2);
+	color: #f00;
+}
+.navbar button:hover {
+	background: var(--pri-2);
+	color: var(--pri-1);
+}
+.nav-links-container {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.navbar-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 20px;
+	text-decoration: none;
+	color: var(--white);
+	font-size: 1.2rem;
+	font-weight: 500;
+	padding-inline: 15px;
+	padding-block: 10px;
+	border-radius: 5px;
+}
+.active {
+	background-color: var(--pri-1);
+	color: var(--black);
+}
+.navbar-link:hover {
+	background-color: var(--pri-1);
+	color: var(--black);
+	text-shadow: 2px 1px 8px var(--a-1);
+}
+.nav-burger-menu {
+	display: none;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 24px;
+	height: 24px;
+}
+.nav-mobile-menu {
+	top: 0px;
+	flex: 0 0 auto;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+	padding: var(--space-2);
+	z-index: 100;
+	position: absolute;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #fff;
+}
+.nav-small {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
+.logged-in-nav,
+.logged-out {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-inline: 15px;
+  position: absolute;
+  right: 0;
+}
+.profile-avatar-link img {
+	margin-right: 10px;
+	max-width: 50px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 1px solid #252525;
+}
+.profile-avatar-link img:hover {
+	border: 1px solid var(--pri-1);
+}
+.logout-button {
+	background-color: var(--shade-1);
+}
+.logout-button:hover {
+	background-color: var(--pri-1);
+	color: #000;
+}
+.logged-in-nav .create-venue {
+	margin-top: 30px;
+	margin-right: 20px;
+	background-color: var(--pri-1);
+  border: 2px solid var(--pri-2);
+	color: var(--black);
+	padding: 10px 15px;
+	text-decoration: none;
+	border-radius: 50%;
+  transition: all 0.3s ease;
+	
+}
+.logged-in-nav .create-venue::before {
+  content: "+";
+}
+.logged-in-nav .create-venue:hover {
+	background-color: var(--pri-2);
+  border: 2px solid var(--pri-1);
+  color: var(--pri-1);
+	padding: 10px 20px;
+  border-radius: 20px;
+}
+.logged-in-nav .create-venue:hover::before {
+  content: "Create Venue";
+}
+.not-logged-in{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,85 @@
+:root{
+  --border-radius: 10px;
+}
+.account-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 90vh;
+}
+
+.account-container,
+.settings,
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.settings,
+.booking-section,
+.scrollable-bookings,
+.all-bookings {
+  padding: 20px;
+  background-color: var(--shade-1);
+  color: var(--pri-1);
+  border-radius: var(--border-radius);
+}
+
+.settings {
+  justify-content: space-around;
+}
+
+.user-info,
+.change-avatar-form button {
+  margin-bottom: 20px;
+}
+
+.avatar-preview {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.booking-section {
+  text-align: center;
+  background-color: var(--shade-2);
+  box-shadow: var(--box-shadow);
+  margin: 20px 0;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.booking-detail,
+.scrollable-bookings,
+.all-bookings {
+  text-align: center;
+  border: 1px solid var(--pri-1);
+}
+
+.scrollable-bookings {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.booking-detail:not(:last-child) {
+  border-bottom: none;
+}
+
+.booking-detail:last-child {
+  margin-bottom: 0;
+}
+
+.booking-detail p {
+  margin: 5px 0;
+}
+
+.booking-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}

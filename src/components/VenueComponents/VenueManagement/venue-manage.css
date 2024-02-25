@@ -1,0 +1,73 @@
+.venue-management-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: var(--shade-1);
+  border-bottom: 1px solid var(--pri-1);
+}
+
+.management-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.venue-management-panel.open .management-content {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+}
+
+.management-content {
+  display: flex;
+  max-width: 80vw;
+}
+
+.managed-venues {
+  flex: 1;
+}
+.venue-item {
+    text-align: center;
+    background: var(--shade-1);
+    border: 1px solid var(--pri-1);
+    margin: 10px 10px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .venue-item img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+  
+  .venue-item button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.booking-details {
+  flex: 2;
+}
+
+.booking-item {
+    background: var(--shade-2);
+    border: 1px solid var(--pri-1);
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .booking-dates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .booking-item p {
+    margin: 5px 5px;
+  }
+  

@@ -1,0 +1,136 @@
+
+.center-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.venue-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--shade-1);
+  border-inline: 1px solid var(--pri-1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: var(--color-text-light);
+  max-width: 80vw;
+  min-width: 70vw;
+}
+.manage-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+.venue-container h1 {
+  font-size: 2rem;
+  margin-bottom:20px;
+  color: var(--pri-1);
+}
+.venue-details h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+.edit-button{
+  background: var(--pri-1);
+  color: var(--black);
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.edit-button:hover{
+  background-color: var(--pri-2);
+  color: #fff;
+}
+/* venue images */
+.venue-image {
+  text-align: center;
+  width: 100%;
+  min-height: 550px;
+  box-shadow: inset 0 0 20px 0px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--pri-1);
+  background: #0c0c0c;
+}
+
+.venue-image img {
+  max-width: 45vh;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* venue details */
+.venue-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 80%;
+  min-height: 250px;
+  border: 1px solid var(--pri-1);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: inset 0 0 20px 0px rgba(0, 0, 0, 0.5);
+  background-color: var(--shade-2);
+}
+
+.venue-details p {
+  font-size: 1.4rem;
+  color: #dccec5;
+}
+
+/* venue meta */
+.venue-meta {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  border-radius: 0px 0px 21px 21px;
+  justify-content: space-around;
+  border-top: 1px solid var(--pri-1);
+  background: var(--shade-1);
+}
+.venue-meta p{
+  padding: 5px 20px;
+  border-radius: 15px;
+  background: var(--pri-2);
+  color: var(--pri-1);
+}
+
+/* venue location */
+.venue-location {
+  font-style: italic;
+  color: var(--white);
+  margin-block: 20px;
+}
+.bottom-section{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+/* booking container */
+.booking-container {
+  text-align: center;
+  margin-block: 20px;
+  padding: 20px;
+  border: 1px solid var(--pri-1);
+  border-radius: 20px;
+  background: var(--bg-1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: var(--color-text-dark);
+  height: 400px;
+}
+.booking-container form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 350px;
+  
+}
+.booking-container form input{
+  border-radius: 3px;
+}

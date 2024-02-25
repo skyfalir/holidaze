@@ -1,0 +1,118 @@
+.modal {
+	background: linear-gradient(rgba(9, 57, 41, 0.7), rgba(0, 0, 0, 0.6) );
+	backdrop-filter: blur(5px);
+	padding: 20px;
+	max-width: 900px;
+	min-height: 200px;
+	border-radius: 10px;
+}
+.modal-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-inline: 15px;
+}
+.modal form div {
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+	border-radius: 5px;
+}
+.error {
+	background-color: var(--shade-1);
+}
+.form-error {
+	color: #f00;
+	text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.324);
+	text-align: center;
+	margin-bottom: 10px;
+}
+input {
+	padding: 10px;
+	border: 1px solid var(--pri-1);
+	border-radius: 5px;
+	width: 350px;
+	color: #3f3f3f;
+}
+input[type='radio'] {
+	width: 20px;
+}
+hr {
+	width: 100%;
+}
+.modal button {
+	margin: 10px 1px 10px 1px;
+	padding: 10px 30px;
+	background: var(--pri-2);
+	color: var(--pri-1);
+	cursor: pointer;
+	border: 1px solid var(--pri-1);
+	border-radius: 5px;
+}
+
+.modal button:hover {
+	background-color: var(--pri-1);
+	border: 1px solid #3f3f3f;
+	color: #3f3f3f;
+}
+.modal .active {
+	background-color: var(--pri-1);
+	border: 1px solid var(--pri-2);
+	color: var(--pri-2);
+}
+.avatar-container {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.avatar-preview {
+	margin-block: 20px;
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+}
+.radio-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row; 
+  }
+
+.radio-container input[type='radio'] {
+	display: inline-block;
+	height: 0;
+	width: 	0;				
+	opacity: 0;
+}
+
+.radio-container label {
+	display: flex;
+	justify-content: center;
+	margin: 15px 10px;
+	height: 35px;
+	width: 35px;
+	font-size: 17px;
+	cursor: pointer;
+	border: 1px solid var(--pri-2); 
+	border-radius: 4px;
+	color: var(--pri-1);
+}
+.radio-container p{
+	margin-top: 15px;
+}
+
+.radio-container input[type='radio']:checked + label {
+	background-color: var(--pri-1); 
+	color: var(--shade-1); 
+}
