@@ -1,15 +1,15 @@
-# Venue Showcase Platform
+# Holidaze
 
 Connecting venue seekers with a world of possibilities.
 
 ## Overview
 
-Welcome to the Venue Showcase Platform, a comprehensive solution designed for venue managers to exhibit their spaces and for users to discover and book the perfect venue for their events. Our platform simplifies the process of finding and managing venues, offering an efficient and straightforward user interface coupled with a powerful search function.
+Welcome to Holidaze, a comprehensive solution designed for venue managers to exhibit their spaces and for users to discover and book the perfect venue for their events.
 
 ### Features
 
 - **Venue Discovery**: Users can browse a diverse collection of venues, each presented with detailed information and rich media.
-- **Advanced Search**: Find the ideal venue with an intuitive search function, complete with sorting options to cater to various preferences.
+- **Search, Simplified**: Find the ideal venue with an intuitive search function, complete with sorting options to cater to various preferences.
 - **Venue Management**: Venue managers can effortlessly create, update, and manage their listings through a user-friendly management interface.
 - **Booking System**: Streamlined booking process that allows users to secure their venue of choice with ease.
 - **Responsive Design**: An accessible and consistent experience across all devices, ensuring that managers and users can interact with the platform anytime, anywhere.
@@ -28,7 +28,12 @@ To get a local copy up and running, follow these simple steps:
 ### Clone the repo:
 git clone https://github.com/skyfalir/holidaze.git
 
-in the terminal, run the 'npm run start' command.
+### Install all packages:
+
+In the terminal, run 'npm install' to get downloaded and set up.
+
+### Local hosting:
+run the 'npm run start' command.
 
 This runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
