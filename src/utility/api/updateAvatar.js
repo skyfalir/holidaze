@@ -19,7 +19,6 @@ export const avatarUpdate = async (avatarUrl) => {
         localStorageHandling.setUserData(userData);
       } else {
         console.log('Avatar update failed');
-        console.log(accessToken)
       }
     } catch (error) {
       console.error('Error updating avatar:', error);

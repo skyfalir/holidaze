@@ -11,7 +11,6 @@ const VenueManagementPanel = () => {
 			const userData = localStorageHandling.getUserData();
 			if (userData && userData.name) {
 				const profileData = await getProfileData(userData.name, 'venues');
-				console.log('Profile data:', profileData);
 				if (profileData && profileData.length > 0) {
 					setVenues(profileData);
 				}

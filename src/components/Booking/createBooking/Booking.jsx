@@ -32,13 +32,12 @@ const Booking = ({ venue }) => {
         dateTo: formData.dateTo.toISOString(),
         guests: parseInt(formData.guests, 10)
     };
-    console.log(bookingData)
+
     if (bookingData.dateFrom && bookingData.dateTo && bookingData.guests > 0) {
-        console.log('Form data submitted:', bookingData);
+
         try {
           const { isSuccessful, data } = await createBooking(bookingData);
           if (isSuccessful) {
-                console.log('Booking successful', data);
                 window.location.reload();
             } else {
                 console.error('Booking failed:', isSuccessful.statusText);

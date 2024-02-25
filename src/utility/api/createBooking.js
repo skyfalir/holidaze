@@ -2,7 +2,6 @@ import { apiUrl } from '../apiConstants';
 import localStorageHandling from '../localStorageHandling'; 
 
 const createBooking = async (bookingData) => {
-  console.log(bookingData)
   const endpoint = `${apiUrl}/bookings`;
 
   try {

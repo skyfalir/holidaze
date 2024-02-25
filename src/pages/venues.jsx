@@ -10,11 +10,18 @@ import { AuthContext } from '../context/AuthContext';
 const Venues = () => {
 	const [venueData, setVenueData] = useState([]);
 	const [filters, setFilters] = useState({ sortOrder: 'desc', sortField: 'name' });
+	const [searchTerm, setSearchTerm] = useState('');
 	const [currentPage, setCurrentPage] = useState(1);
-	const itemsPerPage = 10; //add 3 options for items per page
+	const defaultItemsPerPage = 10;
+    const searchItemsPerPage = 100; // A higher number when searching
+    const [itemsPerPage, setItemsPerPage] = useState(defaultItemsPerPage);
 	const { isVenueManager, isLoggedIn } = useContext(AuthContext);
 	const handleFilterChange = (newFilters) => {
 		setFilters(newFilters);
+		if (newFilters.searchQuery !== undefined) {
+            setSearchTerm(newFilters.searchQuery);
+            setItemsPerPage(searchTerm ? searchItemsPerPage : defaultItemsPerPage);
+		}
 	};
 
 	useEffect(() => {
@@ -41,6 +48,9 @@ const Venues = () => {
 	const handlePageChange = (newPage) => {
 		setCurrentPage(newPage);
 	};
+	const filteredVenueData = venueData.filter(venue =>
+		venue.name.toLowerCase().includes(searchTerm.toLowerCase())
+	);
 
 	return (
 		<div>
@@ -64,7 +74,7 @@ const Venues = () => {
 								/>
 							</div>
 							<div className="venue-cards-container">
-								{venueData.map((venue) => (
+								{filteredVenueData.map((venue) => (
 									<VenueCard key={venue.id} venue={venue} />
 								))}
 							</div>

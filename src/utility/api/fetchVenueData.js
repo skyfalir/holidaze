@@ -15,7 +15,7 @@ const getVenueData = async ( id, currentPage, itemsPerPage, filters) => {
 
       endpoint += queries + sortQuery + `&offset=${offset}`;
     } else {
-      endpoint += queries + `limit=10`; // Default query when no filters are provided (just in case)
+      endpoint += queries + `${itemsPerPage}`; // Default query when no filters are provided (just in case)
     }
 
     const userData = localStorageHandling.getUserData();

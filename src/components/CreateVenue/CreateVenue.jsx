@@ -100,9 +100,6 @@ function CreateVenueForm({ id, isEditMode }) {
 		});
 	};
 	const handleSubmit = async () => {
-		const validationErrors = validateFormData(formData);
-		setErrors(validationErrors);
-		if (Object.keys(validationErrors).length === 0) {
 		try {
 			let apiResponse;
 			if (isEditMode) {
@@ -116,18 +113,9 @@ function CreateVenueForm({ id, isEditMode }) {
 			}
 		} catch (error) {
 			console.error('Error submitting CreateVenueForm:', error);
-		}
 	}
 	};
-	const renderValidationErrors = (errors) => {
-		return (
-		  <div className="validation-errors">
-			{Object.keys(errors).map((key) => (
-			  <div key={key}>{errors[key]}</div>
-			))}
-		  </div>
-		);
-	  };
+
 	const handleDeleteVenue = async () => {
 		try {
 		  const result = await deleteVenue(id);
@@ -146,14 +134,14 @@ function CreateVenueForm({ id, isEditMode }) {
 			return (
 			  <>
 				<StepOne formData={formData} handleChange={handleChange} errors={errors} />
-				{renderValidationErrors(errors.stepOne)}
+				
 			  </>
 			);
 		  case 2:
 			return (
 			  <>
 				<StepTwo formData={formData} handleChange={handleChange} errors={errors} />
-				{renderValidationErrors(errors.stepTwo)}
+				
 			  </>
 			);
 		  case 3:
@@ -165,7 +153,6 @@ function CreateVenueForm({ id, isEditMode }) {
 				  setFormData={setFormData}
 				  errors={errors}
 				/>
-				{renderValidationErrors(errors.stepThree)}
 			  </>
 			);
 		  default:
