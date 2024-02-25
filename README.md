@@ -28,6 +28,10 @@ To get a local copy up and running, follow these simple steps:
 ### Clone the repo:
 git clone https://github.com/skyfalir/holidaze.git
 
+### Install all packages:
+
+Run npm install to get downloaded and set up.
+
 ### Local hosting:
 in the terminal, run the 'npm run start' command.
 
