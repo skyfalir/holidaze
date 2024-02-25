@@ -9,7 +9,6 @@ const Account = () => {
 	const [error, setError] = useState('');
 	const [closestBooking, setClosestBooking] = useState(null);
 	const [otherBookings, setOtherBookings] = useState([]);
-
 	useEffect(() => {
 		const fetchAndProcessBookings = async () => {
 			const userData = localStorageHandling.getUserData();
@@ -20,20 +19,14 @@ const Account = () => {
 						(a, b) => new Date(a.dateFrom) - new Date(b.dateFrom)
 					);
 					const today = new Date();
-
-					// Find the first upcoming booking where dateFrom is in the future
 					const firstUpcomingIndex = sortedBookings.findIndex(
 						(booking) => new Date(booking.dateFrom) >= today
 					);
-
 					if (firstUpcomingIndex !== -1) {
-						// Set the closest upcoming booking
 						setClosestBooking(sortedBookings[firstUpcomingIndex]);
-						
 						setOtherBookings(sortedBookings);
 					;
 					} else {
-						// No upcoming bookings, set both states to empty
 						setClosestBooking(null);
 						setOtherBookings([]);
 					}
@@ -42,7 +35,6 @@ const Account = () => {
 				}
 			}
 		};
-
 		fetchAndProcessBookings();
 	}, []);
 	const isValidUrl = (url) => {

@@ -6,7 +6,6 @@ const VenueManagementPanel = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [venues, setVenues] = useState([]);
 	const [selectedVenue, setSelectedVenue] = useState(null);
-
 	useEffect(() => {
 		const fetchVenues = async () => {
 			const userData = localStorageHandling.getUserData();
@@ -20,7 +19,6 @@ const VenueManagementPanel = () => {
 		};
 		fetchVenues();
 	}, []);
-
 	const handleToggleOpen = () => {
 		setIsOpen(!isOpen);
 	};

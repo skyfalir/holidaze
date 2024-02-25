@@ -1,7 +1,6 @@
 const validateFormData = (formData) => {
     let errors = {};
   
-    // Example validation rules
     if (!formData.name.trim()) {
       errors.name = 'Name is required';
     }

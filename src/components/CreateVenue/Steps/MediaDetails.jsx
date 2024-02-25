@@ -5,7 +5,6 @@ import '../createvenueform.css';
 const StepThree = ({ formData, handleChange, setFormData }) => {
 	const [mediaData, setMediaData] = useState([]);
 	const [newMediaUrl, setNewMediaUrl] = useState('');
-
 	const handleMediaUrlChange = (e) => {
 		setNewMediaUrl(e.target.value);
 	};
@@ -32,8 +31,7 @@ const StepThree = ({ formData, handleChange, setFormData }) => {
 			...prevFormData,
 			media: mediaData.map((item) => item.url), 
 		}));
-	}, [mediaData, setFormData]); // I know SetFormData is redundant here, ESlint is complaining however - so here it is..
-
+	}, [mediaData, setFormData]);
 	return (
 		<>
 			<h2>Show off your venue!</h2>
@@ -86,5 +84,4 @@ const StepThree = ({ formData, handleChange, setFormData }) => {
 		</>
 	);
 };
-
 export default StepThree;

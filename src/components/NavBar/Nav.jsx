@@ -8,13 +8,11 @@ const Nav = () => {
 	const { isLoggedIn, setIsLoggedIn, isVenueManager } = useContext(AuthContext);
 	const [showModal, setShowModal] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
 	const toggleMobileMenu = () => {
 	  setIsMobileMenuOpen(!isMobileMenuOpen);
 	};
 	const getNavLinkClass = ({ isActive }) =>
 		isActive ? 'navbar-link active' : 'navbar-link';
-
 	useEffect(() => {
 		const userData = localStorage.getItem('userData');
 		if (userData) {
@@ -78,19 +76,19 @@ const Nav = () => {
 				className="nav-burger-menu"
 				onClick={toggleMobileMenu}
 			>
-				{/* Burger menu SVG */}
+				{}
 			</div>
 			<div
 				data-role="MobileMenu"
 				className={`nav-mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}
 			>
-				{/* Existing code for your mobile menu */}
+				{}
 				<div
 					data-role="CloseMobileMenu"
 					className="nav-close-menu"
 					onClick={toggleMobileMenu}
 				>
-					{/* Close menu SVG */}
+					{}
 				</div>
 			</div>
 		</nav>

@@ -99,7 +99,6 @@ function CreateVenueForm({ id, isEditMode }) {
 			}
 		});
 	};
-
 	const handleSubmit = async () => {
 		const validationErrors = validateFormData(formData);
 		setErrors(validationErrors);

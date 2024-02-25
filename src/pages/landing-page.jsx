@@ -1,10 +1,7 @@
 import React from 'react'
-
 import { Helmet } from 'react-helmet'
-
 import FeaturedCard from '../components/Featured-Card/Featured-Card'
 import './landing-page.css'
-
 export default function LandingPage() {
   return (
     <div className="home-container">
@@ -78,7 +75,6 @@ export default function LandingPage() {
             <span>300</span>
           </h1>
         </div>
-
       <div className="home-stat">
         <svg viewBox="0 0 1024 1024" className="home-icon">
           <path d="M810 640v-86h-84v86h84zM810 810v-84h-84v84h84zM554 298v-84h-84v84h84zM554 470v-86h-84v86h84zM554 640v-86h-84v86h84zM554 810v-84h-84v84h84zM298 470v-86h-84v86h84zM298 640v-86h-84v86h84zM298 810v-84h-84v84h84zM640 470h256v426h-768v-598h256v-84l128-128 128 128v256z"></path>
@@ -90,10 +86,8 @@ export default function LandingPage() {
         <h1 className="home-number">
           <span>20</span>
         </h1>
-        
       </div>
     </div>
     </div>
-    
   )
 }

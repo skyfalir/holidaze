@@ -1,14 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 function Collapsible({ title, children, style }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const contentRef = useRef(null);
-
   const toggleExpansion = () => {
     setIsExpanded(!isExpanded);
   };
-
-  // Calculate the max-height for the transition, and set initial max-height to 0
   useEffect(() => {
     if (contentRef.current) {
       contentRef.current.style.maxHeight = isExpanded
@@ -16,15 +12,12 @@ function Collapsible({ title, children, style }) {
         : '0px';
     }
   }, [isExpanded]);
-
   const defaultStyle = {
     cursor: 'pointer',
     overflow: 'hidden',
     transition: 'max-height 0.3s ease',
   };
-
   const combinedStyle = { ...defaultStyle, ...style };
-
   return (
     <div>
       <div onClick={toggleExpansion} style={{ ...combinedStyle, maxHeight: 'none' }}>
@@ -36,5 +29,4 @@ function Collapsible({ title, children, style }) {
     </div>
   );
 }
-
 export default Collapsible;

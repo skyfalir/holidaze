@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './venue-card.css';
-
 const VenueCard = ({ venue }) => {
   if (!venue) {
     return <div>Loading...</div>;
@@ -11,7 +10,7 @@ const VenueCard = ({ venue }) => {
       <div className="venue-card-image-container">
         <img
           alt={venue.name}
-          src={venue.media[0]} // Assuming the first media item is the image URL
+          src={venue.media[0]}
           className="venue-card-image"
         />
       </div>
@@ -35,8 +34,6 @@ const VenueCard = ({ venue }) => {
         </Link>
       </div>
     </div>
-
   );
 };
-
 export default VenueCard;
