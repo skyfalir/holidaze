@@ -28,6 +28,7 @@ To get a local copy up and running, follow these simple steps:
 ### Clone the repo:
 git clone https://github.com/skyfalir/holidaze.git
 
+### Local hosting:
 in the terminal, run the 'npm run start' command.
 
 This runs the app in the development mode.\
