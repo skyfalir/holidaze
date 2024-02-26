@@ -11,7 +11,7 @@ Welcome to Holidaze, a place designed for venue managers to exhibit their spaces
 - **Venue Discovery**: Users can browse a diverse collection of venues, each presented with detailed information and rich media.
 - **Search, Simplified**: Find the ideal venue with an intuitive search function, complete with sorting options to cater to various preferences.
 - **Venue Management**: Venue managers can effortlessly create, update, and manage their listings through a user-friendly management interface.
-- **Booking System**: Streamlined booking process that allows users to secure their venue of choice with ease.
+- **Booking System**: Streamlined booking process that allows users to secure their venue of choice with ease. Users can find their upcoming bookings in on their account page.
 
 ### Goals
 
