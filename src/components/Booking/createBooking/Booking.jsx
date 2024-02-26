@@ -35,8 +35,8 @@ const Booking = ({ venue }) => {
 
     if (bookingData.dateFrom && bookingData.dateTo && bookingData.guests > 0) {
 
-        try {
-          const { isSuccessful, data } = await createBooking(bookingData);
+        try {//eslint-disable-next-line 
+         const { isSuccessful, data } = await createBooking(bookingData);
           if (isSuccessful) {
                 window.location.reload();
             } else {

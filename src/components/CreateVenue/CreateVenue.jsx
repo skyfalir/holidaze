@@ -7,11 +7,11 @@ import StepTwo from './Steps/LocationDetails';
 import StepThree from './Steps/MediaDetails';
 import getVenueData from '../../utility/api/fetchVenueData';
 import deleteVenue from '../../utility/api/deleteVenue';
-import validateFormData from './utils/validation';
+import {validateStepOne, validateStepTwo} from './utils/validation';
 function CreateVenueForm({ id, isEditMode }) {
 	const navigate = useNavigate();
-	const [step, setStep] = useState(1);
 	const [errors, setErrors] = useState({});
+	const [currentStep, setCurrentStep] = useState(1);
 	const [formData, setFormData] = useState({
 		name: '',
 		description: '',
@@ -35,6 +35,8 @@ function CreateVenueForm({ id, isEditMode }) {
 			lng: 0,
 		},
 	});
+
+	// Fetch and set venue data on edit mode
 	useEffect(() => {
 		const fetchAndSetVenueData = async () => {
 			try {
@@ -48,22 +50,42 @@ function CreateVenueForm({ id, isEditMode }) {
 			fetchAndSetVenueData();
 		}
 	}, [isEditMode, id]);
+
+	// handle form steps
+
+	const validateCurrentStep = () => {
+		switch (currentStep) {
+		case 1:
+			return validateStepOne(formData);
+		case 2:
+				return validateStepTwo(formData);
+		
+		  default:
+			return {};
+		}
+	  };
+
 	const totalSteps = 3;
-	const isLastStep = step === totalSteps;
+	const isLastStep = currentStep === totalSteps;
 	const handlePrevious = () => {
-		if (step > 1) {
-			setStep((prevStep) => prevStep - 1);
+		if (currentStep > 1) {
+			setCurrentStep(currentStep - 1);
 		}
 	};
 	const handleNext = () => {
-		if (step < totalSteps) {
-			setStep((prevStep) => prevStep + 1);
+		const currentErrors = validateCurrentStep();
+		setErrors(currentErrors);
+	
+		if (Object.keys(currentErrors).length === 0) {
+		  setCurrentStep(currentStep + 1);
 		}
-	};
+	  };
+
+	// handle form data
 	const handleChange = (e) => {
 		const { name, value, type, checked } = e.target;
 		setFormData((prevFormData) => {
-			if (step === 1) {
+			if (currentStep === 1) {
 				if (type === 'checkbox') {
 					return {
 						...prevFormData,
@@ -83,7 +105,7 @@ function CreateVenueForm({ id, isEditMode }) {
 						[name]: value,
 					};
 				}
-			} else if (step === 2) {
+			} else if (currentStep === 2) {
 				return {
 					...prevFormData,
 					location: {
@@ -99,6 +121,7 @@ function CreateVenueForm({ id, isEditMode }) {
 			}
 		});
 	};
+	// handle form submission
 	const handleSubmit = async () => {
 		try {
 			let apiResponse;
@@ -115,7 +138,7 @@ function CreateVenueForm({ id, isEditMode }) {
 			console.error('Error submitting CreateVenueForm:', error);
 	}
 	};
-
+	// handle delete
 	const handleDeleteVenue = async () => {
 		try {
 		  const result = await deleteVenue(id);
@@ -128,8 +151,10 @@ function CreateVenueForm({ id, isEditMode }) {
 		  console.error('Error deleting venue:', error);
 		}
 	  };
+
+	  // render form steps
 	  const renderStep = () => {
-		switch (step) {
+		switch (currentStep) {
 		  case 1:
 			return (
 			  <>
@@ -159,12 +184,13 @@ function CreateVenueForm({ id, isEditMode }) {
 			return null;
 		}
 	  };
+	  
 	return (
 		<div className="form-container">
 			<div className="create-venue-form">
 				{renderStep()}
 				<div className="step-buttons">
-					<button onClick={handlePrevious} disabled={step === 1}>
+					<button onClick={handlePrevious} disabled={currentStep === 1}>
 						Back
 					</button>
 					{isLastStep ? (
