@@ -4,7 +4,7 @@ Connecting venue seekers with a world of possibilities.
 
 ## Overview
 
-Welcome to Holidaze, a comprehensive solution designed for venue managers to exhibit their spaces and for users to discover and book the perfect venue for their events.
+Welcome to Holidaze, a place designed for venue managers to exhibit their spaces and for users to discover and book the perfect venue for their events.
 
 ### Features
 
