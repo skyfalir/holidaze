@@ -47,3 +47,7 @@ You may also see any lint errors in the console.
 ## bugs:
 Firefox Might throw wegbl error when interacting with the map on a venue's page.
 This is a firefox issue, and can be resolved by going to about:config > searching "webgl.force-enable" and setting it to true.
+
+### Additional information
+- Aside from the base functionality of flexbox, the design is not responsive.
+- Some elements are purely cosmetic and provide no function in this demo
