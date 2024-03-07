@@ -1,5 +1,5 @@
 # Holidaze
-
+[![image](https://i.gyazo.com/d97b70e82f60403bdabe9d7d289f4d1a.jpg)](https://svh-holi.netlify.app/)
 Connecting venue seekers with a world of possibilities.
 
 ## Overview
@@ -12,6 +12,10 @@ Welcome to Holidaze, a place designed for venue managers to exhibit their spaces
 - **Search, Simplified**: Find the ideal venue with an intuitive search function, complete with sorting options to cater to various preferences.
 - **Venue Management**: Venue managers can effortlessly create, update, and manage their listings through a user-friendly management interface.
 - **Booking System**: Streamlined booking process that allows users to secure their venue of choice with ease. Users can find their upcoming bookings in on their account page.
+- **Mapbox interactive maps**: Using MapBox allows users to find the venue's location quickly and easily.
+
+### Built with
+- **React**
 
 ### Goals
 
@@ -39,7 +43,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
 
 ## bugs:
 Firefox Might throw wegbl error when interacting with the map on a venue's page.
