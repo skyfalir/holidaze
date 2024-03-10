@@ -26,17 +26,25 @@ The Venue Showcase Platform is dedicated to:
 
 ## Getting Started
 
-To get a local copy up and running, follow these simple steps:
+To get started with eCom, follow these steps:
 
-### Clone the repo:
-git clone https://github.com/skyfalir/holidaze.git
+1. **Clone the repository to your local machine:**
 
-### Install all packages:
+   ```bash
+   git clone https://github.com/skyfalir/holidaze.git
+   ```
 
-In the terminal, run 'npm install' to get downloaded and set up.
+2. **Install the necessary dependencies:**
 
-### Local hosting:
-run the 'npm run start' command.
+    ```bash
+    npm install
+    ```
+
+3. **start sass and live server:**
+
+    ```bash
+    npm run start
+    ```
 
 This runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
